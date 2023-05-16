@@ -8,7 +8,8 @@ class IdeasController < ApplicationController
     redirect_to root_path
   end
 
-  def idea_params
-    params.require(:idea).permit(:title, :description)
-  end
+  private
+    def idea_params
+      params.require(:idea).permit(:title, :description)
+    end
 end
